@@ -1,0 +1,2 @@
+const h=[['X-Frame-Options','DENY'],['X-Content-Type-Options','nosniff'],['Referrer-Policy','strict-origin-when-cross-origin'],['Strict-Transport-Security','max-age=63072000; includeSubDomains'],['Permissions-Policy','camera=(), microphone=(), geolocation=()']].map(([key,value])=>({key,value}));
+export default {output:'standalone',serverExternalPackages:['better-sqlite3'],poweredByHeader:false,async headers(){return[{source:'/(.*)',headers:h}]}};
